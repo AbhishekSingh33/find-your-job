@@ -16,16 +16,16 @@ const jobSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    experienceLevel:{
-        type:Number,
-        required:true,
-    },
     location: {
         type: String,
         required: true
     },
     jobType: {
         type: String,
+        required: true
+    },
+    experience: {
+        type: Number,
         required: true
     },
     position: {
@@ -42,11 +42,10 @@ const jobSchema = new mongoose.Schema({
         ref: 'User',
         required: true
     },
-    applications: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Application',
-        }
-    ]
-},{timestamps:true});
-export const Job = mongoose.model("Job", jobSchema);
+    applications: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Application'
+    }]
+}, { timestamps: true });
+
+export const Job = mongoose.model('Job', jobSchema);

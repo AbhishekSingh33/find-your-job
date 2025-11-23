@@ -5,11 +5,11 @@ import { singleUpload } from "../middlewares/mutler.js";
  
 const router = express.Router();
 
-// use singleUpload if controller expects a file
-router.route("/register").post(register);
+// Add singleUpload back for file upload
+router.route("/register").post(singleUpload, register);
 router.route("/login").post(login);
 router.route("/logout").get(logout);
-router.route("/profile/update").post(isAuthenticated, updateProfile);
+router.route("/profile/update").post(isAuthenticated, singleUpload, updateProfile);
 
 export default router;
 
