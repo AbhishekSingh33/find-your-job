@@ -164,7 +164,13 @@ If you want, I can also add:
 
 ✔ Shields/badges
 ✔ API documentation section
+
+
+
+<img width="2159" height="1439" alt="image" src="https://github.com/user-attachments/assets/74d60e2d-d114-49f5-a344-72187a7a9358" />
+
 ✔ Screenshots section with sample images
 ✔ A “How to contribute” guide
 
 Just say: “Add more sections” or “Add badges” 😊
+
