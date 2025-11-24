@@ -15,7 +15,7 @@ const Applicants = () => {
     useEffect(() => {
         const fetchAllApplicants = async () => {
             try {
-                const res = await axios.get(`${APPLICATION_API_END_POINT}/${params.id}/applicants`, { withCredentials: true });
+                const res = await axios.post(`${APPLICATION_API_END_POINT}/${params.id}/applicants`, { withCredentials: true });
                 dispatch(setAllApplicants(res.data.job));
             } catch (error) {
                 console.log(error);
@@ -23,6 +23,21 @@ const Applicants = () => {
         }
         fetchAllApplicants();
     }, []);
+    const handleApplyJob = async (jobId) => {
+        try {
+            // CHANGE: GET → POST
+            const res = await axios.post(
+                `${APPLICATION_API_END_POINT}/apply/${jobId}`,
+                {},  // empty body
+                { withCredentials: true }
+            );
+            console.log(res.data);
+            alert(res.data.message);
+        } catch (error) {
+            console.log(error);
+            alert(error.response?.data?.message || "Failed to apply");
+        }
+    }
     return (
         <div>
             <Navbar />
