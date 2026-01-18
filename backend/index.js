@@ -26,6 +26,9 @@ const corsOptions = {
         'https://find-your-job-mmjc.vercel.app',
         'https://find-your-job-g5i9.vercel.app'
     ],
+
+
+    
     credentials: true
 }
 
