@@ -24,11 +24,8 @@ const corsOptions = {
         'http://localhost:5175',
         'http://localhost:5176',
         'https://find-your-job-mmjc.vercel.app',
-        'https://find-your-job-g5i9.vercel.app'
+        'https://your-frontend-url.vercel.app' // Replace with your actual frontend URL
     ],
-
-
-    
     credentials: true
 }
 
